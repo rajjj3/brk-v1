@@ -1,0 +1,1630 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharatha Rakshana Kavacham | Youth for India</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+    --navy: #071d3b;
+    --navy-light: #102d52;
+    --orange: #f47721;
+    --green: #219653;
+    --blue: #174b8b;
+    --white: #ffffff;
+    --light: #f5f7fa;
+    --text: #24354d;
+    --muted: #66758a;
+    --border: #e3e8ef;
+    --shadow: 0 5px 20px rgba(10, 30, 60, 0.09);
+  --orange-soft: #fff3eb;
+  --border-color: #e2e8f0;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+/* ================= NAVBAR ================= */
+/* Transparent Navbar */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    box-shadow: none;
+    color: white;
+}
+
+/* Full-width Navbar */
+.navbar {
+    width: 100%;
+    max-width: none;
+    min-height: 80px;
+    padding: 0 4%;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.brand-img {
+    height: 48px; /* Adjust based on your logo shape */
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-text strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.brand-text small {
+    display: block;
+    font-size: 10px;
+    color: #d3dce9;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative; /* REQUIRED for absolutely positioned ::after pseudo-element */
+    font-size: 13px;
+    font-weight: 500;
+    color: #e8edf5;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    background-color: var(--orange, orange);
+    transition: width 0.3s ease;
+}
+
+    .nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 11px 22px;
+    border-radius: 9px;
+    border: 1px solid transparent;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-orange {
+    background: var(--orange);
+    color: white;
+}
+
+.btn-orange:hover {
+    background: #e5640e;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: rgba(255,255,255,.7);
+    color: white;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--navy);
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 22px;
+    background: transparent;
+    border: none;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 25, 52, 0.97) 0%,
+            rgba(5, 25, 52, 0.88) 35%,
+            rgba(5, 25, 52, 0.40) 65%,
+            rgba(5, 25, 52, 0.10) 100%
+        ),
+        url("kalamji.png")
+        center center / cover no-repeat;
+
+    color: white;
+}
+.hero-content {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 100px 4% 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.eyebrow span {
+    color: #65c57b;
+    margin-left: 8px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 4.2vw, 54px);
+    line-height: 1.12;
+    font-weight: 800;
+    max-width: 600px;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 .orange {
+    color: var(--orange);
+}
+
+.hero h1 .green {
+    color: #62bd65;
+}
+
+.hero p {
+    max-width: 440px;
+    font-size: 14px;
+    margin: 17px 0 23px;
+    color: #e1e8f0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ================= SECTION HEADINGS ================= */
+
+.section {
+    padding: 55px 0;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading .eyebrow {
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.section-heading p {
+    color: var(--muted);
+    max-width: 500px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* ================= DHARMACHAKRA ================= */
+.spokes-section {
+    width: 90%;
+    padding: 20px 0;
+    background: transparent;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 800;
+}
+
+.section-heading p {
+    color: var(--muted);
+    max-width: 580px;
+    margin: 10px auto 0;
+    font-size: 14px;
+}
+
+/* ================= 3-COLUMN PARALLEL GRID ================= */
+.spokes-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr minmax(250px, 300px) 1fr; /* Left Cards | Center Wheel | Right Cards */
+    align-items: center;
+    gap: 32px;
+}
+
+/* Column of Cards */
+.cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Individual Card Design (Retained individual card borders/shadows, but removed section container outer borders) */
+.dharma-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(10, 30, 60, 0.04);
+    transition: all 0.3s ease;
+}
+
+.dharma-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--orange);
+    box-shadow: 0 8px 24px rgba(244, 119, 33, 0.12);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.card-icon.orange { background: #fff0e5; color: var(--orange); }
+.card-icon.green  { background: #e7f5eb; color: var(--green); }
+.card-icon.blue   { background: #e9f0fc; color: var(--blue); }
+
+.card-info h3 {
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.card-info p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* ================= YOUR DHARMA WHEEL CSS ================= */
+.dharma-wheel {
+    width: min(245px, 100%);
+    aspect-ratio: 1;
+    border: 1px solid #dce5ef;
+    border-radius: 50%;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    position: relative;
+    background: radial-gradient(circle, #fff 56%, #f5f8fc 57%);
+    box-shadow: 0 0 0 8px #f8fafc, 0 0 0 9px #dfe7f0;
+}
+
+.wheel-inner {
+    width: 60%;
+    aspect-ratio: 1;
+    border: 7px solid var(--navy);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: white;
+    position: relative;
+}
+
+.wheel-inner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+        from 0deg,
+        transparent 0deg 7deg,
+        var(--navy) 7deg 9deg,
+        transparent 9deg 15deg
+    );
+}
+
+.wheel-inner i {
+    font-size: 45px;
+    color: var(--navy);
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 1;
+}
+
+.wheel-spokes {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    animation: rotateWheel 60s linear infinite;
+}
+
+.wheel-spokes span {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: var(--green);
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.15);
+}
+
+.wheel-spokes span:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); background: var(--orange); }
+.wheel-spokes span:nth-child(2) { top: 7%; right: 23%; background: var(--orange); }
+.wheel-spokes span:nth-child(3) { top: 23%; right: 7%; }
+.wheel-spokes span:nth-child(4) { top: 50%; right: 0; transform: translateY(-50%); }
+.wheel-spokes span:nth-child(5) { bottom: 23%; right: 7%; }
+.wheel-spokes span:nth-child(6) { bottom: 7%; right: 23%; }
+.wheel-spokes span:nth-child(7) { bottom: 0; left: 50%; transform: translateX(-50%); }
+.wheel-spokes span:nth-child(8) { bottom: 7%; left: 23%; background: var(--blue); }
+.wheel-spokes span:nth-child(9) { bottom: 23%; left: 7%; background: var(--blue); }
+.wheel-spokes span:nth-child(10) { top: 50%; left: 0; transform: translateY(-50%); background: var(--blue); }
+.wheel-spokes span:nth-child(11) { top: 23%; left: 7%; background: var(--orange); }
+.wheel-spokes span:nth-child(12) { top: 7%; left: 23%; background: var(--orange); }
+
+@keyframes rotateWheel {
+    to { transform: rotate(360deg); }
+}
+
+  /* ================= KEY PROGRAMS SECTION ================= */
+/* Main section */
+.programs-section {
+    width: 100%;
+    padding: 50px 5%;
+    background:#ffffff;
+    box-sizing: border-box;
+}
+
+/* Outer rounded container */
+.programs-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 65px 55px;
+
+    background:#f4f6f9;
+    border: 1px solid #e3e8ef;
+    border-radius: 32px;
+
+    box-shadow: 0 15px 50px rgba(15, 35, 65, 0.07);
+}
+
+/* Section heading */
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #e87518;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    color: #172b4d;
+    margin: 0 0 15px;
+}
+
+.section-heading p {
+    color: #68778d;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Programs layout */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Individual program card */
+.program-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    padding: 35px 30px;
+    min-height: 480px;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        145deg,
+        #24344e,
+        #101e35
+    );
+
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 35, 65, 0.2);
+}
+
+/* Decorative number */
+.program-number {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+
+    font-size: 46px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.07);
+}
+
+/* Card heading */
+.program-card h3 {
+    font-size: 25px;
+    line-height: 1.3;
+    margin: 15px 0 10px;
+    color: #ffffff;
+}
+
+/* Subtitle */
+.program-subtitle {
+    color: #ff922e;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Description */
+.program-card p {
+    color: #c5d0df;
+    font-size: 15px;
+    line-height: 1.75;
+    margin: 0 0 22px;
+}
+
+/* Features */
+.program-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+}
+
+.program-card li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 13px;
+
+    color: #e2e8f0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.program-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ff922e;
+    font-weight: 700;
+}
+
+/* Learn more link */
+.program-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: auto;
+    padding-top: 20px;
+
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.program-link span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.program-link:hover span {
+    background: #ff922e;
+    border-color: #ff922e;
+    color: #172b4d;
+    transform: translateX(4px);
+}
+
+
+/* ================= ADDITIONAL SECTION ================= */
+/* Container expanded to match your top section width */
+.sketch-layout-section {
+    width: 90%;
+    margin: 40px auto;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Balanced Grid Split */
+.sketch-grid {
+    display: grid;
+    grid-template-columns: 62% 35%; /* Enlarged left image column */
+    gap: 10%;
+    padding: 10px 100px 50px 20px;
+    align-items: stretch;
+}
+
+/* =========================================
+   LEFT SIDE: ENLARGED IMAGE & OVERLAP QUOTE
+   ========================================= */
+.sketch-left {
+    position: relative;
+    width: 100%;
+    height: 420px; /* Increased height from 340px to 420px */
+}
+
+.sketch-image-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 12px 30px rgba(7, 29, 59, 0.12);
+}
+
+.sketch-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 15% Overlap Quote Box */
+.sketch-quote-box {
+    position: absolute;
+    bottom: -40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 86%;
+    background: var(--navy);
+    border: 2px solid var(--orange); 
+    border-radius: 14px;
+    padding: 16px 28px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(7, 29, 59, 0.25);
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.sketch-quote-box p {
+    margin: 0;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #ffffff;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.sketch-quote-box span {
+    display: block;
+    font-size: 12px;
+    color: var(--orange);
+    margin-top: 5px;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* =========================================
+   RIGHT SIDE: ENLARGED BUBBLE CARDS
+   ========================================= */
+.sketch-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15px; /* Room for card 1 tail */
+    gap: 16px;
+}
+
+/* Base style for enlarged cards */
+.bubble-card {
+    position: relative;
+    border-radius: 16px;
+    padding: 22px 24px; /* Increased padding */
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(7, 29, 59, 0.04);
+    transition: all 0.3s ease;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bubble-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--orange);
+    box-shadow: 0 10px 25px rgba(244, 119, 33, 0.12);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.card-header i {
+    color: var(--orange);
+    font-size: 18px; /* Larger icon */
+}
+
+.bubble-card h3 {
+    margin: 0;
+    font-size: 17.5px; /* Larger card title */
+    font-weight: 800;
+    color: var(--navy);
+}
+
+.bubble-card p {
+    margin: 0;
+    font-size: 13.5px; /* Larger description text */
+    color: var(--text-muted);
+    line-height: 1.55;
+    font-weight: 500;
+}
+
+/* Speech Bubble Top Tail (Triangles) */
+.bubble-card::before, .bubble-card::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Outer Border Triangle */
+.bubble-card::before {
+    border-width: 0 11px 13px 11px;
+    border-color: transparent transparent var(--border-color) transparent;
+    top: -13px; 
+    left: 32px;
+    transition: border-color 0.3s ease;
+}
+
+/* Inner Fill Triangle */
+.bubble-card::after {
+    border-width: 0 9px 11px 9px;
+    top: -10px; 
+    left: 34px;
+}
+
+.bubble-card:hover::before {
+    border-color: transparent transparent var(--orange) transparent;
+}
+
+/* SOFT LIGHT COLORS FOR CARDS */
+/* Card 1: Soft Ice Blue */
+.sketch-right .bubble-card:nth-child(1) {
+    background: #f0f5ff;
+    border-color: #cbd5e1;
+}
+.sketch-right .bubble-card:nth-child(1)::before { border-color: transparent transparent #cbd5e1 transparent; }
+.sketch-right .bubble-card:nth-child(1)::after { border-color: transparent transparent #f0f5ff transparent; }
+
+/* Card 2: Soft Warm Orange */
+.sketch-right .bubble-card:nth-child(2) {
+    background: #fff5ed;
+    border-color: #fed7aa;
+}
+.sketch-right .bubble-card:nth-child(2)::before { border-color: transparent transparent #fed7aa transparent; }
+.sketch-right .bubble-card:nth-child(2)::after { border-color: transparent transparent #fff5ed transparent; }
+
+/* Card 3: Soft Mint Green */
+.sketch-right .bubble-card:nth-child(3) {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+.sketch-right .bubble-card:nth-child(3)::before { border-color: transparent transparent #bbf7d0 transparent; }
+.sketch-right .bubble-card:nth-child(3)::after { border-color: transparent transparent #f0fdf4 transparent; }
+
+/* ================= CTA ================= */
+
+.cta {
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(7,29,59,.85), rgba(7,29,59,.18)),
+        url("joinus10.png")
+        center 55% / cover;
+    padding: 45px 0;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.cta h2 {
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.25;
+}
+
+.cta h2 span {
+    color: var(--orange);
+}
+
+.cta p {
+    font-size: 13px;
+    margin: 10px 0 18px;
+    color: #edf2f7;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: var(--navy);
+    color: white;
+}
+
+.footer-main {
+    padding: 35px 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr 1.4fr;
+    gap: 25px;
+}
+
+.footer-brand p {
+    color: #cbd5e1;
+    font-size: 12px;
+    margin-top: 12px;
+    max-width: 230px;
+}
+
+.footer-column h3 {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.footer-column a,
+.footer-column p {
+    display: block;
+    color: #cbd5e1;
+    font-size: 11px;
+    margin-bottom: 7px;
+}
+
+.footer-column a:hover {
+    color: var(--orange);
+}
+
+.footer-column p i {
+    margin-right: 7px;
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.15);
+    padding: 13px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 10px;
+    color: #cbd5e1;
+}
+
+.footer-bottom a {
+    margin-left: 15px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1050px) {
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .programs-container {
+        padding: 50px 35px;
+    }
+
+    .programs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 800px) {
+
+    .navbar {
+        min-height: 70px;
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        background: rgba(7, 29, 59, 0.97);
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5% 20px;
+
+        display: none;
+        border-top: 1px solid rgba(255,255,255,.12);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    .spokes-grid-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .wheel-container {
+        order: -1;
+    }
+
+    .sketch-grid {
+        grid-template-columns: 1fr;
+        gap: 65px;
+    }
+    .sketch-left {
+        height: 280px;
+    }
+    .sketch-right {
+        gap: 25px;
+    }
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .program-card {
+        min-height: 480px;
+    }
+}
+
+@media (max-width: 650px) {
+    .programs-section {
+        padding: 45px 4%;
+    }
+
+    .programs-container {
+        padding: 40px 20px;
+        border-radius: 24px;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .program-card {
+        min-height: 420px;
+        padding: 30px 25px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: 550px) {
+    .container,
+    .hero-content {
+        width: 90%;
+    }
+
+    .navbar {
+        min-height: 65px;
+    }
+
+    .brand-logo {
+        width: 43px;
+        height: 43px;
+        font-size: 24px;
+    }
+
+    .brand-text strong {
+        font-size: 11px;
+    }
+
+    .brand-text small {
+        font-size: 9px;
+    }
+
+    .nav-links {
+        top: 65px;
+    }
+
+    .nav-actions .btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 440px;
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+    <div class="navbar">
+
+        <a href="#" class="brand">
+    <img src="brklogo.png" alt="BRK Logo" class="brand-img">
+    <div class="brand-text">
+        <strong>B R K</strong>
+        <small>Youth for India</small>
+    </div>
+</a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#what-we-do">Our programms<i class="fa-solid fa-chevron-down"></i></a></li>
+            <li><a href="#spokes">Our work</i></a></li>
+            <li><a href="#initiatives">Case studies</i></a></li>
+            <li><a href="#resources">Contact us</i></a></li>
+            <li><a href="#media">Gallery</i></a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="#get-involved" class="btn btn-orange">Get Involved</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="about">
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Youth for India <span>• Vision 2050</span>
+        </div>
+
+        <h1>
+            Empowering Children.<br>
+            Educating Youth.<br>
+            <span class="orange">Building</span>
+            <span class="green">India.</span>
+        </h1>
+
+        <p>
+            Bharatha Rakshana Kavacham (BRK) is a youth organisation
+            working towards an empowered, educated and developed India.
+            Together, let's build the India of 2050.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#vision" class="btn btn-orange">
+                 Explore Our Initiatives
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#initiatives" class="btn btn-outline">
+                Support us
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================  Dharma chakra =================-->
+
+<section class="container spokes-section">
+
+    <!-- Section Heading -->
+    <div class="section-heading">
+        <div class="eyebrow">Our Guiding Principles</div>
+        <h2>24 Spokes of Dharmachakra</h2>
+        <p>Driving India's progress through holistic growth, youth involvement, and national transformation.</p>
+    </div>
+
+    <!-- Grid Layout: Left Cards | Wheel | Right Cards -->
+    <div class="spokes-grid-container">
+
+        <!-- LEFT COLUMN (3 CARDS) -->
+        <div class="cards-column left-cards">
+            
+            <div class="dharma-card">
+                <div class="card-icon orange">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Education & Research</h3>
+                    <p>Fostering quality learning, scientific innovation, and lifelong knowledge access.</p>
+                </div>
+            </div>
+
+            <div class="dharma-card">
+                <div class="card-icon green">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Environment & Sustainability</h3>
+                    <p>Promoting eco-friendly practices and responsible natural resource protection.</p>
+                </div>
+            </div>
+
+            <div class="dharma-card">
+                <div class="card-icon blue">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Youth Leadership</h3>
+                    <p>Building capable, compassionate leaders and empowered young changemakers.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CENTER COLUMN (YOUR DHARMA WHEEL CODE) -->
+        <div class="wheel-container">
+            <div class="dharma-wheel">
+                <div class="wheel-spokes">
+                    <span><i class="fa-solid fa-book"></i></span>
+                    <span><i class="fa-solid fa-graduation-cap"></i></span>
+                    <span><i class="fa-solid fa-leaf"></i></span>
+                    <span><i class="fa-solid fa-heart"></i></span>
+                    <span><i class="fa-solid fa-people-group"></i></span>
+                    <span><i class="fa-solid fa-seedling"></i></span>
+                    <span><i class="fa-solid fa-handshake"></i></span>
+                    <span><i class="fa-solid fa-lightbulb"></i></span>
+                    <span><i class="fa-solid fa-house"></i></span>
+                    <span><i class="fa-solid fa-shield-heart"></i></span>
+                    <span><i class="fa-solid fa-globe"></i></span>
+                    <span><i class="fa-solid fa-hands-holding-child"></i></span>
+                </div>
+
+                <div class="wheel-inner">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN (3 CARDS) -->
+        <div class="cards-column right-cards">
+
+            <div class="dharma-card">
+                <div class="card-icon blue">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Health & Healthcare</h3>
+                    <p>Ensuring mental and physical well-being for communities across the country.</p>
+                </div>
+            </div>
+
+            <div class="dharma-card">
+                <div class="card-icon orange">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Community Upliftment</h3>
+                    <p>Empowering rural areas through grassroots support and infrastructure.</p>
+                </div>
+            </div>
+
+            <div class="dharma-card">
+                <div class="card-icon green">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Child Welfare</h3>
+                    <p>Protecting children's fundamental rights and creating safe spaces to learn.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================= PROGRAMS ================= -->
+
+ 
+<section class="programs-section">
+    <div class="programs-container">
+
+        <div class="section-heading">
+            <span class="section-tag">WHAT WE DO</span>
+            <h2>Our Programs</h2>
+            <p>
+                Initiatives designed to empower individuals,
+                strengthen communities, and create meaningful change.
+            </p>
+        </div>
+
+        <div class="programs-grid">
+
+            <!-- Program 1 -->
+            <div class="program-card">
+                <div class="program-number">01</div>
+
+                <h3>Marganirdeshanam</h3>
+                <span class="program-subtitle">
+                    CAREER GUIDANCE & COUNSELLING
+                </span>
+
+                <p>
+                    Empowering students with structured roadmaps
+                    and clarity to achieve their higher education
+                    and career aspirations.
+                </p>
+
+                <ul>
+                    <li>Personalized stream & subject selection</li>
+                    <li>Psychometric & aptitude assessment workshops</li>
+                    <li>Mentorship from industry experts & alumni</li>
+                </ul>
+
+                <a href="#" class="program-link">
+                    Learn more <span>→</span>
+                </a>
+            </div>
+
+            <!-- Program 2 -->
+            <div class="program-card">
+                <div class="program-number">02</div>
+
+                <h3>Project Manthana</h3>
+                <span class="program-subtitle">
+                    SCHOOL OBSERVATION & IMPROVEMENT
+                </span>
+
+                <p>
+                    A diagnostic framework conducting deep
+                    observations to identify gaps and improve
+                    rural education standards.
+                </p>
+
+                <ul>
+                    <li>On-ground school classroom auditing</li>
+                    <li>Teacher training & pedagogical support</li>
+                    <li>Infrastructure & resource assessment</li>
+                </ul>
+
+                <a href="#" class="program-link">
+                    Learn more <span>→</span>
+                </a>
+            </div>
+
+            <!-- Program 3 -->
+            <div class="program-card">
+                <div class="program-number">03</div>
+
+                <h3>Project Sphoorti</h3>
+                <span class="program-subtitle">
+                    SKILL DEVELOPMENT & YOUTH EMPOWERMENT
+                </span>
+
+                <p>
+                    Igniting potential in youth through essential
+                    life skills, digital literacy, and leadership
+                    training programs.
+                </p>
+
+                <ul>
+                    <li>Soft skills & communication workshops</li>
+                    <li>Basic digital literacy & computer education</li>
+                    <li>Leadership & community initiative projects</li>
+                </ul>
+
+                <a href="#" class="program-link">
+                    Learn more <span>→</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= WHY BRK ================= -->
+<section class="sketch-layout-section">
+    <div class="sketch-grid">
+        
+        <!-- LEFT SIDE: Enlarged Image + 15% Overlapping Quote -->
+        <div class="sketch-left">
+            <div class="sketch-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80" alt="Students Learning">
+            </div>
+            
+            <div class="sketch-quote-box">
+                <p>"Education is the most powerful weapon which you can use to change the world."</p>
+                <span>— Nelson Mandela</span>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE: Enlarged 3 Bubble Cards -->
+        <div class="sketch-right">
+            
+            <!-- Card 1 -->
+            <div class="bubble-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-compass"></i>
+                    <h3>Career Guidance</h3>
+                </div>
+                <p>Empowering students with personalized stream choices and career roadmaps tailored to aptitude.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bubble-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <h3>Bridging Learning Gaps</h3>
+                </div>
+                <p>Targeted remedial interventions resolving foundational reading, logic, and numeric skills early.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bubble-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Future Readiness</h3>
+                </div>
+                <p>Building resilient, skilled youth equipped with essential modern life skills and clear vision.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta" id="get-involved">
+    <div class="container cta-grid">
+
+        <div>
+            <h2>The Future is Our Responsibility.<br>The Time is <span>Now.</span></h2>
+            <p>Let's learn from our past, act in the present and build the India of 2050.</p>
+            <div class="cta-buttons">
+                <a href="#media" class="btn btn-outline">
+                    Join us
+                </a>
+            
+                <a href="#media" class="btn btn-outline">
+                    Partner with us
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="resources">
+
+    <div class="container footer-main">
+
+        <div class="footer-brand">
+            <a href="#" class="brand">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="brand-text">
+                    <strong>BHARATHA<br>RAKSHANA KAVACHAM</strong>
+                    <small>Youth for India · Vision 2050</small>
+                </div>
+            </a>
+
+            <p>
+                Working towards an empowered, educated and developed India
+                through service, awareness and collective action.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#about">About Us</a>
+            <a href="#what-we-do">What We Do</a>
+            <a href="#spokes">24 Spokes</a>
+            <a href="#initiatives">Our Initiatives</a>
+            <a href="#get-involved">Contact Us</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Resources</h3>
+            <a href="#">Reports & Publications</a>
+            <a href="#">Blog</a>
+            <a href="#">Gallery</a>
+            <a href="#">Downloads</a>
+            <a href="#">Volunteer</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Hyderabad, Telangana, India</p>
+            <p><i class="fa-solid fa-phone"></i> +91 123 456 7890</p>
+            <p><i class="fa-solid fa-envelope"></i> info@brk.org.in</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter to receive updates and stories.</p>
+            <form class="email-form" id="footerForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" aria-label="Subscribe">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+        <p>© 2026 Bharatha Rakshana Kavacham (BRK). All Rights Reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    </div>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+
+        const icon = menuToggle.querySelector("i");
+
+        if (navLinks.classList.contains("show")) {
+            icon.classList.replace("fa-bars", "fa-xmark");
+        } else {
+            icon.classList.replace("fa-xmark", "fa-bars");
+        }
+    });
+
+    // Close mobile navigation after selecting a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.classList.remove("show");
+
+            const icon = menuToggle.querySelector("i");
+            icon.classList.replace("fa-xmark", "fa-bars");
+        });
+    });
+
+    // Newsletter demo interaction
+    function handleSubscription(formId) {
+        const form = document.getElementById(formId);
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const email = form.querySelector("input").value;
+
+            alert("Thank you for joining BRK! We will keep you updated at " + email + ".");
+
+            form.reset();
+        });
+    }
+
+    handleSubscription("joinForm");
+    handleSubscription("footerForm");
+</script>
+</body>
+</html>
